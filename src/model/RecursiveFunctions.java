@@ -2,36 +2,34 @@ package model;
 
 public class RecursiveFunctions {
 	
-	public static int factorial(int n, int[] a) {
-		return factorial(n, a);
-	}
-	
-	public static int fact(int n, int[] a) {
+	public static int factorial(int n) {
 		if (n == 0) {
-			return a[0] = 1;
+			return 1;
 		} else {
-			
+			return n*factorial(n-1);
 		}
+	
 	}
 	
 	public static int Fibonacci(int n) {
-		return Fibonacci(n);
+		if (n == 0) {
+			return 0;
+		} else if(n==1){
+			return 1;
+		}else {
+			return Fibonacci(n-1) + Fibonacci(n-2);
+		}
 	}
 	
-	public static int arraySummatory(int[] a, int n) {
-		return arraySummatory(a, n);
+	public static int arraySummatory(int[] a) {
+		return arraySum(a, a.length-1);
 	}
 	
 	public static int arraySum(int[] a, int n) {
 		if (n == 0) {
 			return a[0];
 		} else {
-			return a[n]+arraySummatory(a, n-1);
+			return a[n]+arraySum(a, a.length-1);
 		}
 	}
-	
-	public static void main() {
-		
-	}
-
 }
