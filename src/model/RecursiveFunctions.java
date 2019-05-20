@@ -32,4 +32,12 @@ public class RecursiveFunctions {
 			return a[n]+arraySum(a, a.length-1);
 		}
 	}
+	
+	public static int recursiveSum(int n) {
+		if (n == 1) {
+			return 1;
+		} else {
+			return n+recursiveSum(n-1);
+		}
+	}
 }

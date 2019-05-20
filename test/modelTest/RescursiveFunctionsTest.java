@@ -34,5 +34,11 @@ class RescursiveFunctionsTest {
 		setUpScenary();
 		assertEquals(8, RecursiveFunctions.Fibonacci(6));
 	}
+	
+	@Test
+	public void sumTest() {
+		setUpScenary();
+		assertEquals(3, RecursiveFunctions.recursiveSum(2));
+	}
 
 }
